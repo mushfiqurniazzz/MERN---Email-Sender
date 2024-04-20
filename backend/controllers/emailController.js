@@ -4,7 +4,7 @@ const nodemailer = require("nodemailer");
 const EmailModel = require("../DB/Models/emailModel");
 const SenderEmail = process.env.SENDER_EMAIL;
 const SenderEmailPass = process.env.SENDER_PASS;
-const ReceiverEmails = process.env.RECIEVER_LIST;
+const ReceiverEmails = process.env.RECIEVER_LIST.split(',');
 const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 465,
@@ -53,4 +53,8 @@ const sendEmailController = async (req, res) => {
     }
 };
 
-module.exports = sendEmailController;
+const getUsers = (req, res) => {
+    res.json(ReceiverEmails.length);
+}
+
+module.exports = {sendEmailController, getUsers};
