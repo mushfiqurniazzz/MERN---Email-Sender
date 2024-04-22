@@ -1,4 +1,5 @@
 <h1>Simple MERN Email Sender</h1>
+![Screen Shot of the App's UI](./utils/Screenshot%20from%202024-04-20%2018-19-17.png)
 <p>This MERN app allows users to send emails to single or multiple users very , featuring functionalities for adding attachments,texts or paragraphs, and saving every single emails sent in MongoDB. It uses MongoDB as the database to store email data, Express.js for handling server-side logic, React.js for building the user interface, and Node.js for server-side runtime environment. The app provides a seamless experience for users to send emails and save time which their time.</p>
 <h3>Running the Project Locally</h3>
   <p>To run this project on your local machine, follow these steps:
